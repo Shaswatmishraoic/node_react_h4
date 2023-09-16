@@ -9,7 +9,7 @@ const register = (req,res) =>{
     if(find){
         return res.send({msg:"email already register"});
     }
-    const generatesalt = bcrypt.genSaltSync(10)
+    // const generatesalt = bcrypt.genSaltSync(10)
     const hashpassword = bcrypt.hashSync(details.password,saltround)
     const temp = {
         email: details.email,
